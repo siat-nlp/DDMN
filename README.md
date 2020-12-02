@@ -1,5 +1,5 @@
 # DDMN
-This repository contains data and code for the COLING'2020 paper "[Dual Dynamic Memory Network for End-to-End Multi-turn Task-oriented Dialog Systems]()".
+This repository contains data and code for the COLING'2020 paper "[Dual Dynamic Memory Network for End-to-End Multi-turn Task-oriented Dialog Systems](https://www.aclweb.org/anthology/2020.coling-main.362)".
 
 In this paper, we propose a Dual Dynamic Memory Network (DDMN) for multi-turn dialog generation, which maintains two core components: dialog memory manager and KB memory manager. The dialog memory manager dynamically expands the dialog memory turn by turn and keeps track of dialog history with an updating mechanism, which encourages the model to filter irrelevant dialog history and memorize important newly coming information. The KB memory manager shares the structural KB triples throughout the whole conversation, and dynamically extracts KB information with a memory pointer at each turn.
 
@@ -48,4 +48,24 @@ eval_dir=[xxx]       # directory of the generation output
 and then run:
 ```
 sh run_eval.sh
+```
+
+## Citation
+If you use our code in your work, please cite as:
+```
+@inproceedings{wang-etal-2020-dual,
+    title = "Dual Dynamic Memory Network for End-to-End Multi-turn Task-oriented Dialog Systems",
+    author = "Wang, Jian  and
+      Liu, Junhao  and
+      Bi, Wei  and
+      Liu, Xiaojiang  and
+      He, Kejing  and
+      Xu, Ruifeng  and
+      Yang, Min",
+    booktitle = "Proceedings of the 28th International Conference on Computational Linguistics",
+    year = "2020",
+    address = "Barcelona, Spain (Online)",
+    publisher = "International Committee on Computational Linguistics",
+    pages = "4100--4110"
+}
 ```
