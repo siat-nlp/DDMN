@@ -142,7 +142,7 @@ class BeamGenerator(object):
 
             # Update fields for next timestep
             predecessors = (
-                candidates / self.V + self.pos_index.expand_as(candidates)).view(b * self.k)
+                candidates // self.V + self.pos_index.expand_as(candidates)).view(b * self.k)
 
             dec_state = dec_state.index_select(predecessors)
 
