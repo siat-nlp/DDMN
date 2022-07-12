@@ -380,10 +380,9 @@ class Seq2Seq(BaseModel):
 
         if selector_target.size(-1) < selector_logits.size(-1):
             pad_zeros = torch.zeros(size=(num_samples, selector_logits.size(-1)-selector_target.size(-1)),
-                                    dtype=torch.float)
-            if self.use_gpu:
-                pad_zeros = pad_zeros.cuda()
-                selector_target = torch.cat([selector_target, pad_zeros], dim=-1)
+                                    dtype=torch.float).to(selector_target.device)
+            selector_target = torch.cat([selector_target, pad_zeros], dim=-1)
+        
         loss_ptr = self.bce_loss(selector_logits, selector_target, mask=selector_mask)
         loss += loss_ptr
 
