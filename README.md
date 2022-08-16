@@ -52,7 +52,7 @@ sh run_eval.sh
 
 ## Citation
 If you use our code in your work, please cite as:
-```
+```bibtex
 @inproceedings{wang-etal-2020-dual,
     title = "Dual Dynamic Memory Network for End-to-End Multi-turn Task-oriented Dialog Systems",
     author = "Wang, Jian  and
